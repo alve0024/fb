@@ -1,0 +1,35 @@
+<ion-view view-title="Playlists" ng-init="init()">
+  <ion-content>
+    <!--<ion-list>-->
+      <!--<ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">-->
+        <!--{{playlist.title}}-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+    <div class="list card">
+      <div class="item item-avatar">
+        <img ng-src="{{profileData.picture.data.url}}">
+        <h2>{{profileData.name}}</h2>
+        <p></p>
+      </div>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-person"></i> {{profileData.gender}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-flag"></i> {{profileData.locale}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-social-facebook"></i> {{profileData.id}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-map"></i> {{profileData.timezone}}
+      </a>
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-email"></i> {{profileData.email}}
+      </a>
+
+      <div class="padding">
+        <button ng-click="logout()" class="button button-full button-positive">Logout</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
