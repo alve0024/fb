@@ -41,6 +41,16 @@ angular.module('starter', ['ionic', 'ngCordovaOauth', 'ngStorage', 'starter.cont
     }
   })
 
+
+  .state('app.login', {
+     url: '/login',
+     views: {
+       'menuContent': {
+         templateUrl: 'templates/login.html'
+       }
+     }
+  })
+
   .state('app.browse', {
       url: '/browse',
       views: {
@@ -69,5 +79,5 @@ angular.module('starter', ['ionic', 'ngCordovaOauth', 'ngStorage', 'starter.cont
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/login');
 });
